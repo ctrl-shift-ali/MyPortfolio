@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #C7FF3E;
+  color: #0B0B0C;
+}
+
+/* Thin, dark, brand-tinted scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0C;
+}
+::-webkit-scrollbar-thumb {
+  background: #232326;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5CF4E8;
+}
+
+/* Cinematic film-grain overlay, sits above canvas, below UI content */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px #F5F4F1;
+  color: transparent;
+}
+
+/* Magnetic nav link container */
+.magnetic-btn {
+  position: relative;
+  display: inline-block;
+  will-change: transform;
+}
+
+.font-mono-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
