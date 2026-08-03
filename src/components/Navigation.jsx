@@ -55,7 +55,7 @@ function MagneticLink({ href, label }) {
 
 export default function Navigation() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-6 pt-6 md:px-14 md:pt-8">
+    <header className="fixed inset-x-0 top-0 z-50 px-6 md:px-18 md:pt-0">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between rounded-full border border-line/80 bg-obsidian/60 px-6 py-4 backdrop-blur-md">
         <a href="#hero" className="font-display text-lg tracking-tight text-bone">
           M<span className="text-cyber-cyan">-</span>ALI ABEER KHAN <span className="text-cyber-cyan">.</span>
