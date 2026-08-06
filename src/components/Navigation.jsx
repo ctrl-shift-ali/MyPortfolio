@@ -73,8 +73,7 @@ export default function Navigation() {
         >
           Let&apos;s Talk
         </a>
-
-        {/* Mobile: single condensed link */}
+        
         <a href="#contact" className="font-mono-label text-xs text-bone md:hidden">
           Menu
         </a>
