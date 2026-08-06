@@ -28,7 +28,7 @@ const PROJECTS = [
   },
   {
     id: '03',
-    title: 'E-COMMERCE WEBSITE',
+    title: 'E-COMMERCE CART MANAGEMENT SYSTEM',
     category: 'Product Interface - Python Based',
     year: '2026',
     span: 'md:col-span-5',
@@ -44,7 +44,7 @@ const PROJECTS = [
     span: 'md:col-span-7',
     height: 'md:h-[540px]',
     image: 'https://plus.unsplash.com/premium_photo-1710961232986-36cead00da3c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2luZW1hfGVufDB8fDB8fHww',
-    href: 'https://github.com/ctrl-shift-ali/Cinema-Ticket-Booking-System'
+    href: 'https://cinema-ticket-managing-system.vercel.app/'
   },
   {
     id: '05',
