@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useReducedMotion from '../hooks/useReducedMotion';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
@@ -62,83 +64,83 @@ const PROJECTS = [
 const SKILLS = [
   {
     label: 'Python',
-    iconUrl: './assets/python.png',
+    iconUrl: `${BASE_URL}assets/python.png`,
   },
   {
     label: 'HTML-5',
-    iconUrl: './assets/html.png',
+    iconUrl: `${BASE_URL}assets/html.png`,
   },
   {
     label: 'CSS-3',
-    iconUrl: './assets/css.png',
+    iconUrl: `${BASE_URL}assets/css.png`,
   },
   {
     label: 'C & C++ Programming',
-    iconUrl: './assets/c++.jpeg',
+    iconUrl: `${BASE_URL}assets/c++.jpeg`,
   },
   {
     label: 'React',
-    iconUrl: './assets/react.jpeg',
+    iconUrl: `${BASE_URL}assets/react.jpeg`,
   },
   {
     label: 'JavaScript (ES6+)',
-    iconUrl: './assets/JavaScript.png',
+    iconUrl: `${BASE_URL}assets/JavaScript.png`,
   },
   {
     label: 'Tailwind CSS',
-    iconUrl: './assets/Tailwind.webp',
+    iconUrl: `${BASE_URL}assets/Tailwind.webp`,
   },
   {
     label: 'Git & GitHub',
-    iconUrl: './assets/Github.jpeg',
+    iconUrl: `${BASE_URL}assets/Github.jpeg`,
   },
   {
     label: 'Responsive Design',
-    iconUrl: './assets/responsive.jpeg',
+    iconUrl: `${BASE_URL}assets/responsive.jpeg`,
   },
   {
     label: 'UI/UX Principles',
-    iconUrl: './assets/ui-ux.jpeg',
+    iconUrl: `${BASE_URL}assets/ui-ux.jpeg`,
   },
   {
     label: 'Web Performance',
-    iconUrl: './assets/web.jpeg',
+    iconUrl: `${BASE_URL}assets/web.jpeg`,
   },
   {
     label: 'Problem Solving',
-    iconUrl: './assets/problemSolving.png',
+    iconUrl: `${BASE_URL}assets/problemSolving.png`,
   },
   {
     label: 'CLI Development',
-    iconUrl: './assets/cli.jpeg ',
+    iconUrl: `${BASE_URL}assets/cli.jpeg`,
   },
   {
     label: 'Terminal Applications',
-    iconUrl: './assets/terminal.jpg',
+    iconUrl: `${BASE_URL}assets/terminal.jpg`,
   },
   {
     label: 'Database Management',
-    iconUrl: './assets/dbms.png',
+    iconUrl: `${BASE_URL}assets/dbms.jpg`,
   },
   {
     label: 'Machine Learning',
-    iconUrl: './assets/machineLearning.jpg',
+    iconUrl: `${BASE_URL}assets/machineLearning.jpg`,
   },
   {
     label: 'Data Analysis',
-    iconUrl: './assets/dataAnalysis.jpg',
+    iconUrl: `${BASE_URL}assets/dataAnalysis.jpg`,
   },
   {
     label: 'Object-Oriented Programming',
-    iconUrl: './assets/oop.png',
+    iconUrl: `${BASE_URL}assets/oop.png`,
   },
   {
     label: 'My SQL',
-    iconUrl: './assets/sql.png',
+    iconUrl: `${BASE_URL}assets/sql.png`,
   },
   {
     label: 'Ascii Art Designing',
-    iconUrl: './assets/ascii.jpeg',
+    iconUrl: `${BASE_URL}assets/ascii.jpeg`,
   },
 ];
 
@@ -243,61 +245,68 @@ export default function ProjectsGrid() {
   }, [reducedMotion]);
 
   return (
-    <section
-      ref={sectionRef}
-      id="projects"
-      className="relative mx-auto max-w-[1600px] px-6 pt-28 pb-10 md:px-14 md:pt-40 md:pb-24"
-    >
-      <div className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-        <div>
-          <p className="font-mono-label mb-4 text-xs text-cyber-cyan/80">My Workings...</p>
-          <h2 className="font-display text-display-lg text-bone">
-            Recent Projects<span className="text-cyber-lime">.</span>
-          </h2>
-        </div>
-        <p className="max-w-xs font-mono text-xs leading-relaxed text-bone-dim">
-          A selection of my most recent work, showcasing a range of projects that highlight my skills and expertise in various areas of design and development.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
-        {PROJECTS.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-
-      <div className="mt-20 rounded-[2rem] border border-line bg-obsidian-100/70 p-8 backdrop-blur-xl">
-        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <>
+      <section
+        ref={sectionRef}
+        id="projects"
+        className="relative mx-auto max-w-[1600px] px-6 pt-28 pb-10 md:px-14 md:pt-40 md:pb-24"
+      >
+        <div className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div>
-            <p className="font-mono-label mb-4 text-xs text-cyber-cyan/80 width-max-content">Skills</p>
-            <h3 className="font-display text-3xl text-bone">
-              My Skills<span className="text-cyber-lime">.</span>
-            </h3>
+            <p className="font-mono-label mb-4 text-xs text-cyber-cyan/80">My Workings...</p>
+            <h2 className="font-display text-display-lg text-bone">
+              Recent Projects<span className="text-cyber-lime">.</span>
+            </h2>
           </div>
-          <p className="max-w-xl font-mono text-xs leading-relaxed text-bone-dim">
-            A summary of the technologies, languages, and tools I rely on to build polished, modern web experiences.
+          <p className="max-w-xs font-mono text-xs leading-relaxed text-bone-dim">
+            A selection of my most recent work, showcasing a range of projects that highlight my skills and expertise in various areas of design and development.
           </p>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {SKILLS.map((skill) => (
-            <div
-              key={skill.label}
-              className="rounded-2xl border border-cyber-cyan/10 bg-[#0a1018] px-5 py-4 text-sm font-medium text-bone transition hover:border-cyber-cyan/40 hover:bg-[#0e1622]"
-            >
-              <div className="flex items-center gap-3">
-                <img
-                  src={skill.iconUrl}
-                  alt={`${skill.label} logo`}
-                  className="h-10 w-10 object-contain"
-                  loading="lazy"
-                />
-                <span>{skill.label}</span>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section
+        id="skills"
+        className="relative mx-auto max-w-[1600px] px-6 pt-28 pb-10 md:px-14 md:pt-20 md:pb-10"
+      >
+        <div className="rounded-[2rem] border border-line bg-obsidian-100/70 p-8 backdrop-blur-xl">
+          <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="font-mono-label mb-4 text-xs text-cyber-cyan/80 width-max-content">Skills</p>
+              <h3 className="font-display text-display-lg text-bone">
+                My Skills<span className="text-cyber-lime">.</span>
+              </h3>
+            </div>
+            <p className="max-w-xl font-mono text-xs leading-relaxed text-bone-dim">
+              A summary of the technologies, languages, and tools I rely on to build polished, modern web experiences.
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 pt-6">
+            {SKILLS.map((skill) => (
+              <div
+                key={skill.label}
+                className="rounded-2xl border border-cyber-cyan/10 bg-[#0a1018] px-5 py-4 text-sm font-medium text-bone transition hover:border-cyber-cyan/40 hover:bg-[#0e1622]"
+              >
+                <div className="flex items-center gap-3">
+                  <img
+                    src={skill.iconUrl}
+                    alt={`${skill.label} logo`}
+                    className="h-10 w-10 object-contain"
+                    loading="lazy"
+                  />
+                  <span>{skill.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import useReducedMotion from '../hooks/useReducedMotion';
 
 const LINKS = [
   { label: 'Work', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ];
