@@ -8,13 +8,6 @@ const LINKS = [
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ];
-
-const LINK_PREFIX = import.meta.env.DEV ? '' : '/MyPortfolio/dist/';
-
-function buildHref(href) {
-  return `${LINK_PREFIX}${href}`;
-}
-
 function MagneticLink({ href, label }) {
   const ref = useRef(null);
   const reducedMotion = useReducedMotion();
@@ -52,7 +45,7 @@ function MagneticLink({ href, label }) {
   return (
     <a
       ref={ref}
-      href={buildHref(href)}
+      href={href}
       className="magnetic-btn font-mono-label text-xs text-bone-dim transition-colors duration-300 hover:text-cyber-lime focus-visible:text-cyber-lime focus-visible:outline-none"
     >
       {label}
@@ -64,7 +57,7 @@ export default function Navigation() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-6 md:px-18 md:pt-0">
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between rounded-full border border-line/80 bg-obsidian/60 px-6 py-4 backdrop-blur-md">
-        <a href={buildHref('#hero')} className="font-display text-lg tracking-tight text-bone">
+        <a href="#hero" className="font-display text-lg tracking-tight text-bone">
           M<span className="text-cyber-cyan">-</span>ALI ABEER KHAN <span className="text-cyber-cyan">.</span>
         </a>
 
@@ -75,13 +68,13 @@ export default function Navigation() {
         </div>
 
         <a
-          href={buildHref('#contact')}
+          href="#contact"
           className="hidden font-mono-label text-xs text-bone md:inline-flex items-center gap-2 border border-line px-4 py-2 rounded-full transition-colors duration-300 hover:border-cyber-cyan hover:text-cyber-cyan"
         >
           Let&apos;s Talk
         </a>
         
-        <a href={buildHref('#contact')} className="font-mono-label text-xs text-bone md:hidden">
+        <a href="#contact" className="font-mono-label text-xs text-bone md:hidden">
           Menu
         </a>
       </nav>
