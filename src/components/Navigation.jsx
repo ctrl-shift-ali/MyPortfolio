@@ -60,7 +60,7 @@ export default function Navigation() {
     // - md (tablet): `md:px-18` and `md:text-lg` restore larger spacing
     // - Adjust `gap-6` / `gap-10` and CTA `px-3`/`px-4` to control wrapping on narrow widths
     <header className="fixed inset-x-0 top-0 z-50 px-3 md:px-18 md:pt-0">
-      <nav className="mx-auto flex max-w-[1600px] items-center justify-between pb-[10px] rounded-full border border-line/80 bg-obsidian/60 px-3 pt-3 pb-2 md:px-6 md:pt-4 md:pb-2 backdrop-blur-md">
+      <nav className="mx-auto flex max-w-[1600px] items-center justify-between rounded-full border border-line/80 bg-obsidian/60 px-3 pt-3 pb-2 md:px-6 md:pt-4 md:pb-2 backdrop-blur-md">
         <a href="#hero" className="font-display text-sm md:text-lg tracking-tight text-bone leading-tight">
           {/* Brand sizing: change `text-sm` (mobile) and `md:text-lg` (tablet/desktop) here. */}
           M<span className="text-cyber-cyan">-</span>ALI ABEER KHAN <span className="text-cyber-cyan">.</span>

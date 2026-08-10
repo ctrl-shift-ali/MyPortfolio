@@ -41,7 +41,7 @@ export default function Hero() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top top',
-            end: '80% top',
+            end: '100% top',
             scrub: 0.6,
           },
         });

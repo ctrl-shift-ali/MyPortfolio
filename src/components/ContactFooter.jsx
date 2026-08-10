@@ -51,7 +51,7 @@ export default function ContactFooter() {
         <span className="font-display text-[clamp(11vw,15vw,13vw)] leading-[1.05] tracking-tightest text-bone transition-colors duration-500 group-hover:text-cyber-lime">
           LET&apos;S&nbsp;&nbsp;WORK
           <br />
-          TOGETHER
+          TOGETHER&nbsp;!
         </span>
         <span className="mt-6 block h-[2px] w-full origin-left scale-x-0 bg-cyber-lime transition-transform duration-700 ease-cinematic group-hover:scale-x-100" />
       </a>

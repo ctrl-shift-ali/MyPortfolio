@@ -53,7 +53,7 @@ const PROJECTS = [
     title: 'BANK MANAGEMENT SYSTEM',
     category: 'Python Based',
     year: '2026',
-    span: 'md:col-span-7',
+    span: 'md:col-span-6',
     height: 'md:h-[520px]',
     image : 'https://images.unsplash.com/photo-1633265486064-086b219458ec?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     href: 'https://github.com/ctrl-shift-ali/Bank-Management-System'
