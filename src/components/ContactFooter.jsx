@@ -40,7 +40,7 @@ export default function ContactFooter() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative flex min-h-[90vh] flex-col justify-between overflow-hidden border-t border-line bg-obsidian px-6 py-20 md:px-14"
+      className="relative flex min-h-[40vh] flex-col justify-between overflow-hidden border-t border-line bg-obsidian px-6 py-20 md:px-14"
     >
       {/* Background Graphic Layer */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(199,255,62,0.06),transparent_60%)]" />
@@ -48,8 +48,8 @@ export default function ContactFooter() {
         href="mailto:maliabeerkhan1127@gmail.com"
         className="contact-reveal group relative z-10 mx-auto block w-fit text-center"
       >
-        <span className="font-display text-[clamp(2.5rem,10vw,8rem)] leading-[0.95] tracking-tightest text-bone transition-colors duration-500 group-hover:text-cyber-lime">
-          LET&apos;S WORK
+        <span className="font-display text-[clamp(11vw,15vw,13vw)] leading-[1.05] tracking-tightest text-bone transition-colors duration-500 group-hover:text-cyber-lime">
+          LET&apos;S&nbsp;&nbsp;WORK
           <br />
           TOGETHER
         </span>

@@ -33,7 +33,7 @@ export default function Hero() {
         { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.9 }
       );
 
-      if (!reducedMotion) {
+      if (!reducedMotion && window.matchMedia('(min-width: 768px)').matches) {
         gsap.to('.hero-copy', {
           yPercent: -30,
           opacity: 0,
@@ -41,7 +41,7 @@ export default function Hero() {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top top',
-            end: '65% top',
+            end: '80% top',
             scrub: 0.6,
           },
         });
@@ -55,24 +55,35 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-[100svh] w-full overflow-hidden bg-obsidian pb-20"
+      className="relative min-h-auto w-full overflow-hidden bg-obsidian pb-20"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_45%,rgba(92,244,232,0.10),transparent_55%)]" />
 
       <div className="relative z-10 mx-auto grid mt-10 max-w-[1600px] grid-cols-1 items-center gap-6 px-4 pt-16 sm:px-6 md:mt-[4.5rem] md:grid-cols-2 md:gap-8 md:px-14 md:pt-0">
         
         <div className="hero-copy order-2 md:order-1">
+          {/*
+            Responsive heading notes:
+            - xs / mobile: adjust `xs:text-[..]` to shrink for very small widths
+            - sm / small phones: `sm:text-[..]`
+            - md / tablets: `md:text-[..]`
+            - lg / xl: desktop sizes
+            To keep words on one line, use `whitespace-nowrap` on the specific word
+            or reduce the xs font-size value below.
+          */}
           <h1
             ref={headlineRef}
-            className="top-5 -mt-4 font-display font-medium text-[12vw] leading-[1.1] tracking-tightest text-bone uppercase xs:text-[16vw] md:text-[8vw] lg:text-[7vw] xl:text-[6.5vw]"
+            className="top-5 -mt-4 font-display font-medium text-[12vw] leading-[1.15] tracking-tightest text-bone uppercase xs:text-[10vw] sm:text-[9vw] md:text-[8vw] lg:text-[7vw] xl:text-[6.5vw] break-words"
           >
-            <span className="block overflow-hidden">
-              <span className="hero-line block">MUHAMMAD</span>
+            <span className="block overflow-visible xs:flex flex-shrink-0 text-auto">
+              {/* Keep this word on one line: `inline-block` + `whitespace-nowrap`. If it overflows,
+                  reduce `xs:text-[10vw]` or `sm:text-[11vw]` here. */}
+              <span className="hero-line inline-block whitespace-nowrap xs:text-[10vw] sm:text-[7.15vw]">MUHAMMAD</span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-visible xs:overflow-hidden">
               <span className="hero-line block text-outline">ALI ABEER</span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-visible xs:overflow-hidden">
               <span className="hero-line block">KHAN</span>
             </span>
           </h1>
@@ -100,15 +111,19 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative order-1 w-full max-w-[28rem] justify-self-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#060606] transition-shadow duration-500 hover:shadow-[0_30px_140px_rgba(92,244,232,0.14)] xs:max-w-[30rem] xs:rounded-[2rem] md:order-2 md:max-w-[32rem]">
+        <div className="relative order-1 w-full max-w-[30rem] justify-self-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#060606] transition-shadow duration-500 hover:shadow-[0_30px_140px_rgba(92,244,232,0.14)] xs:max-w-[30rem] xs:rounded-[2rem] md:order-2 md:max-w-[35rem]">
+          {/* Avatar/container sizing:
+              - mobile: `h-[70vh]` gives tall crop on phones
+              - md (tablet/laptop): `md:h-[87vh]` larger
+              Adjust these `h-[..]` values inside the image wrapper below to change crop. */}
           <div className="absolute inset-0 border-[1px] border-white/10" />
           <div className="relative flex items-center justify-center p-3 xs:p-4 md:p-6">
-              <div className="group relative w-full overflow-hidden rounded-[1.25rem] border border-cyber-lime/30 bg-transparent shadow-[0_30px_80px_rgba(92,244,232,0.18)] transition-transform duration-500 hover:-translate-y-1 xs:rounded-[2rem] flex flex-col h-[70vh] md:h-[87vh]">
-                <div className="overflow-hidden h-[100%]">
+          <div className="group relative w-full overflow-hidden rounded-[1.25rem] border border-cyber-lime/30 bg-transparent shadow-[0_30px_80px_rgba(92,244,232,0.18)] transition-transform duration-500 hover:-translate-y-1 xs:rounded-[2rem] flex flex-col h-auto md:h-auto lg:h-[100vh] xl:h-auto">
+                <div className="overflow-hidden h-[80%]">
                     <img
                       src={profilePic}
                       alt="Muhammad Ali Abeer Khan"
-                      className="w-full h-full object-cover object-[75%_15%]"
+                      className="w-full h-full object-cover object-[70%_50%] md:object-[45%_20%]"
                     />
                   </div>
                   <div className="border-t border-line/70 bg-[#090909]/90 px-4 py-3 xs:px-5 xs:py-4">

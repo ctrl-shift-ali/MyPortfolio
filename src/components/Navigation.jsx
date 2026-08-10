@@ -55,13 +55,20 @@ function MagneticLink({ href, label }) {
 
 export default function Navigation() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-6 md:px-18 md:pt-0">
-      <nav className="mx-auto flex max-w-[1600px] items-center justify-between rounded-full border border-line/80 bg-obsidian/60 px-6 py-4 backdrop-blur-md">
-        <a href="#hero" className="font-display text-lg tracking-tight text-bone">
+    // Navigation responsive notes:
+    // - Mobile: outer header uses `px-3` and brand `text-sm` for compact layout
+    // - md (tablet): `md:px-18` and `md:text-lg` restore larger spacing
+    // - Adjust `gap-6` / `gap-10` and CTA `px-3`/`px-4` to control wrapping on narrow widths
+    <header className="fixed inset-x-0 top-0 z-50 px-3 md:px-18 md:pt-0">
+      <nav className="mx-auto flex max-w-[1600px] items-center justify-between pb-[10px] rounded-full border border-line/80 bg-obsidian/60 px-3 pt-3 pb-2 md:px-6 md:pt-4 md:pb-2 backdrop-blur-md">
+        <a href="#hero" className="font-display text-sm md:text-lg tracking-tight text-bone leading-tight">
+          {/* Brand sizing: change `text-sm` (mobile) and `md:text-lg` (tablet/desktop) here. */}
           M<span className="text-cyber-cyan">-</span>ALI ABEER KHAN <span className="text-cyber-cyan">.</span>
         </a>
 
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
+          {/* Nav links spacing: `gap-6` on mobile, `md:flex` shows links on md+.
+              Increase gap for wider screens or reduce to prevent overlap on tablets. */}
           {LINKS.map((link) => (
             <MagneticLink key={link.href} {...link} />
           ))}
@@ -69,8 +76,9 @@ export default function Navigation() {
 
         <a
           href="#contact"
-          className="hidden font-mono-label text-xs text-bone md:inline-flex items-center gap-2 border border-line px-4 py-2 rounded-full transition-colors duration-300 hover:border-cyber-cyan hover:text-cyber-cyan"
+          className="hidden font-mono-label text-xs text-bone md:inline-flex items-center gap-2 border border-line px-3 py-2 rounded-full transition-colors duration-300 hover:border-cyber-cyan hover:text-cyber-cyan"
         >
+          {/* CTA button padding: `px-3` for compact mobile, change to `px-4` for more breathing room on tablets. */}
           Let&apos;s Talk
         </a>
         

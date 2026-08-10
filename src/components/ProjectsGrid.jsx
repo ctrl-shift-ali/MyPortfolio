@@ -13,7 +13,7 @@ const PROJECTS = [
     title: 'CUSTOM COMMAND LINE INTERFACE / TERMINAL',
     category: ' CLI + Terminal',
     year: '2026',
-    span: 'md:col-span-5',
+    span: 'md:col-span-6',
     height: 'md:h-[400px]',
     image: 'https://images.unsplash.com/photo-1650600538903-ec09f670c391?q=80&w=771&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     href: 'https://github.com/ctrl-shift-ali/BashByAbeer'
@@ -23,8 +23,8 @@ const PROJECTS = [
     title: 'LIBRARY MANAGEMENT SYSTEM',
     category: 'Python Based',
     year: '2026',
-    span: 'md:col-span-5',
-    height: 'md:h-[420px]',
+    span: 'md:col-span-6',
+    height: 'md:h-[400px]',
     image: 'https://images.unsplash.com/photo-1568667256531-7d5ac92eaa7a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TGlicmFyeSUyME1hbmFnZW1lbnQlMjBTeXN0ZW18ZW58MHx8MHx8fDA%3D',
     href: 'https://github.com/ctrl-shift-ali/Library-Management-System'
   },
@@ -34,7 +34,7 @@ const PROJECTS = [
     category: 'Product Interface - Python Based',
     year: '2026',
     span: 'md:col-span-5',
-    height: 'md:h-[440px]',
+    height: 'md:h-[500px]',
     image: 'https://plus.unsplash.com/premium_photo-1675660733755-c224251a058b?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     href: 'https://github.com/ctrl-shift-ali/E-Commerce-Cart-Management-System'
   },
