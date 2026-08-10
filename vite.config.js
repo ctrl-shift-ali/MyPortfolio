@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => ({
     open: true,
   },
   build: {
+    outDir: 'docs',
     target: 'esnext',
     sourcemap: false,
   },
