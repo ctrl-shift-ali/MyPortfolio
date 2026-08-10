@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useReducedMotion from '../hooks/useReducedMotion';
-import profilePic from './Screenshot_20260427-172110.jpg';
+import profilePic from './pfp_me.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,12 +103,12 @@ export default function Hero() {
         <div className="relative order-1 w-full max-w-[28rem] justify-self-center overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#060606] transition-shadow duration-500 hover:shadow-[0_30px_140px_rgba(92,244,232,0.14)] xs:max-w-[30rem] xs:rounded-[2rem] md:order-2 md:max-w-[32rem]">
           <div className="absolute inset-0 border-[1px] border-white/10" />
           <div className="relative flex items-center justify-center p-3 xs:p-4 md:p-6">
-              <div className="group relative w-full overflow-hidden rounded-[1.25rem] border border-cyber-lime/30 bg-transparent shadow-[0_30px_80px_rgba(92,244,232,0.18)] transition-transform duration-500 hover:-translate-y-1 xs:rounded-[2rem] flex flex-col h-[70vh] md:h-[85vh]">
-                <div className="overflow-hidden h-[99%]">
+              <div className="group relative w-full overflow-hidden rounded-[1.25rem] border border-cyber-lime/30 bg-transparent shadow-[0_30px_80px_rgba(92,244,232,0.18)] transition-transform duration-500 hover:-translate-y-1 xs:rounded-[2rem] flex flex-col h-[70vh] md:h-[87vh]">
+                <div className="overflow-hidden h-[100%]">
                     <img
                       src={profilePic}
                       alt="Muhammad Ali Abeer Khan"
-                      className="w-full h-full object-cover object-[70%_10%]"
+                      className="w-full h-full object-cover object-[75%_15%]"
                     />
                   </div>
                   <div className="border-t border-line/70 bg-[#090909]/90 px-4 py-3 xs:px-5 xs:py-4">
